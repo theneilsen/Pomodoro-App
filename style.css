@@ -1,0 +1,183 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;600&display=swap');
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background: rgb(22, 22, 22);
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+}
+.minimal {
+    color: white;
+    font-size: 1rem;
+    font-family: 'Poppins', sans-serif;
+    font-weight: lighter;
+    word-spacing: 0.75cm;
+    margin: 0;
+}
+#done {
+    position: relative;
+    left: 10px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 15px;
+    width: 40px;
+    height: 25px;
+    border: none;
+    border-radius: 4px;
+    color: rgb(223, 12, 12);
+}
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    background: black;
+    min-width: 390px;
+    padding: 3rem;
+    border-radius: 30px;
+    box-shadow: 0 3px 10px rgba(255, 255, 255, 0.2);
+}
+.container.hidden {
+    visibility: hidden;
+}
+
+h1 {
+    font-weight: lighter;
+    font-size: 2.5rem;
+    margin-top: 4rem;
+    color: white;
+    letter-spacing: 0.5cm;
+    position: relative;
+    left: 0.7rem;
+    margin-bottom: 0;
+}
+
+#setting {
+    margin-top: 2.2rem;
+    font-size: 1.5rem;
+    letter-spacing: 0.25cm;
+    color: rgb(146, 146, 146);
+}
+
+#input_id {
+    width: 60px;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    font-size: 1.1rem;
+    border-radius: 5px;
+    border: none;
+    padding: 0.2rem 0.4rem;
+}
+::placeholder {
+    font-size: 1rem;
+}
+
+#input:focus {
+    outline: none;
+}
+.clock {
+    line-height: 1;
+    margin: 0 0.8rem;
+    font-size: 5rem;
+    color: white;
+}
+
+.clock.hidden {
+    visibility: hidden;
+}
+.el.hidden {
+    visibility: hidden;
+}
+
+
+#startBtn {
+    border: none;
+    padding: 0.5rem 1rem;
+    font-size: 1.2rem;
+    border-radius: 10px;
+    margin-top: 1.5rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.4);
+    background-color: whitesmoke;
+}
+
+#startBtn:hover {
+    background-color:rgb(22, 22, 22);
+    box-shadow: none;
+    color: white;
+    font-weight: lighter;
+    transition: 0.15s;
+}
+
+#startBtn:focus {
+    outline: none;
+}
+
+#stopBtn {
+    border: none;
+    padding: 0.4rem 0.6rem;
+    font-size: 1.2rem;
+    border-radius: 10px;
+    margin-top: 1.5rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.4);
+    background-color: whitesmoke;
+}
+
+#stopBtn:hover {
+    background-color:rgb(22, 22, 22);
+    box-shadow: none;
+    color: white;
+    font-weight: lighter;
+    transition: 0.25s;
+}
+
+#stopBtn:focus {
+    outline: none;
+}
+
+.el {
+    text-align: center;
+}
+.el span {
+    font-weight: normal;
+    line-height: 2rem;
+    color: white;
+}
+#demo {
+    color: white;
+    font-size: 4rem;
+} 
+
+#apprec {
+    color: white;
+    font-size: 1.5rem;
+    letter-spacing: 0.17cm;
+    font-weight: lighter;
+    position: relative;
+    bottom: 100px;
+    margin: 0;
+}
+#secs, #mins {
+    font-weight: lighter;
+}
+.el span {
+    font-weight: lighter;
+}
+#secs.color {
+    color: red;
+}
+#mins.color {
+    color: red;
+}
+.smalls {
+    margin-top: 1rem;
+    color: rgb(146, 146, 146);
+}
+.smalls strong {
+    color: white;
+    font-weight: 400;
+}
