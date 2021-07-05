@@ -11,13 +11,20 @@ const container = document.getElementsByClassName('container');
 const goBtn = document.getElementById('done');
 const el = document.getElementsByClassName('el');
 
+startBtn.disabled = true;
+
+let sessionBreak = false;
+
 let mins;
 let secs;
 let sec;
+let minutes;
+let seconds;
+
 
 form.onsubmit = (e) => {
     if(!isNaN(input.value)) {
-        if(input.value>1) {
+        if(input.value>=1) {
             minsEl.innerHTML = input.value < 10 ? `0${input.value}` : input.value;
             mins = input.value;
             e.preventDefault();
@@ -28,19 +35,23 @@ form.onsubmit = (e) => {
         else alert("Too small for a session!")
     }
     else alert('Not a valid input');
+
+    if (input.value === "") 
+        startBtn.disabled = false;
 }
 
 countDown = () => {
     sec = secs;
 
-    let minutes = Math.floor(decSec(sec)/60) % 60;
-    let seconds = Math.floor(decSec(sec)) % 60;
+    /* if(mins<=60) {
+        minutes = Math.floor(decSec(sec)/60) % 60;
+        seconds = Math.floor(decSec(sec)) % 60;
+    } */
+    minutes = Math.floor(decSec(sec)/60) % mins;
+    seconds = Math.floor(decSec(sec)) % 60;
     
-    // console.log(seconds);
-
     minsEl.innerHTML = formatTime(minutes);
     secsEl.innerHTML = formatTime(seconds);
-
     
     if (minutes === 00 && seconds === 00) {
         for(let i=0; i<clock.length; i++) {
@@ -68,17 +79,13 @@ formatTime = (time) => {
 }
 
 startBtn.addEventListener('click', () => {
-    !input.value === true
-    if(true) {
-        //console.log(input.value);
         setInterval(countDown, 1000);
-    }
-
 });
 
 stopBtn.addEventListener('click', () => {
     location.reload();
 });
+
 
 
 
